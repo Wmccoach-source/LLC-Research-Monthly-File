@@ -1,13 +1,14 @@
 # LLC Case Study Project
 
-This repo builds the case study section of the Leveraged Lion Capital monthly research report. The current case study is AI Infrastructure Financing (cover plus two pages, report pages 4 to 6).
+This repo builds the case study section of the Leveraged Lion Capital monthly research report. The current case study is AI Infrastructure Financing (cover plus three pages, report pages 4 to 7).
 
 ## Files
 - content.js holds all report text. Both builds read from it. Edit text here only.
 - charts.js holds chart ideas, data points, and source links (appendix and speaker notes).
 - data/chart_data.json drives native charts. A chart renders only when "verified" is true.
 - make_pptx.js builds the PowerPoint layout master. make_docx.js builds the Word version with working notes.
-- reference/ holds the March and August reports, which define the house style.
+- reference/ holds the March and August reports, which define the house style. Do not cite or cross reference the March report in report text.
+- Report text must read as current for the publication month. Avoid stale data cutoffs (for example "through July 7") in body text.
 - reviews/ holds committee output. evals/ holds the planted error test.
 
 ## House style (never break these in report text)

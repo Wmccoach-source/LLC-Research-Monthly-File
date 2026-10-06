@@ -162,7 +162,7 @@ const APP_W = PAGE_W - 1100 * 2; // appendix margins 0.76in
 
 // Appendix A, charts
 function appendixCharts() {
-  const out = [aH1("Chart Ideas and Links"), aBody("Seven chart ideas with the data points found so far and where to pull them. Charts C and D fill the two placeholders on page 5, and A and B fill the two on page 6. E, F and G are optional swaps. In the PowerPoint, native charts draw automatically once a chart is marked verified in data/chart_data.json. In this Word file the charts are placeholders to paste into.")];
+  const out = [aH1("Chart Ideas and Links"), aBody("Chart ideas with the data points found so far and where to pull them. Charts D and B fill the two placeholders on page 5, and C and A fill the two on page 7. E and F are optional swaps. In the PowerPoint, native charts draw automatically once a chart is marked verified in data/chart_data.json. In this Word file the charts are placeholders to paste into.")];
   for (const k of charts) {
     out.push(aH2("Chart " + k.id + ", " + k.title));
     out.push(aBody(k.slot + ". " + k.type + ".", { spacing: { after: 60 } }));
@@ -175,76 +175,56 @@ function appendixCharts() {
 
 // Appendix B, verification
 const verify = [
-  ["El Paso pricing", "7.534% yield, about 287.5bps over the 10 year, roughly $17bn of orders, $12.55bn size. These trace to reposts of Bloomberg. Marketed size was $12.3bn, so use the priced figure.", "Bloomberg or the offering documents"],
-  ["Hyperion versus El Paso cost", "6.58% and the 5.5% Meta comparison come from a secondary source, and the deals priced at different Treasury levels. The 'higher cost on the same rating' line is safest with spreads.", "Bloomberg deal pages, pull Hyperion spread"],
-  ["Oracle rating", "Several outlets report S&P cut Oracle to BBB- on July 9. One aggregator listed BBB with a negative outlook in August. Confirm the current S&P rating and outlook.", "S&P Global Ratings"],
-  ["Oracle debt figures", "The $43bn fiscal 2026 raise is on the page. Other figures conflict, including debt above $122bn, $117bn outstanding, and about $260bn of lease obligations.", "Oracle 10 K and 10 Q"],
-  ["Hyperscaler issuance scope", "$194bn through July 7 covers four issuers. About $220bn through August covers five. Decide on one cutoff and scope.", "Reuters and LSEG"],
-  ["Goldman figures", "$750bn capex, $778bn operating cash flow, debt about one third of capex, $250bn and $400bn issuance estimates. Reported through Reuters.", "Goldman Sachs note"],
-  ["IG record and issuer share", "$145.2bn August record and the 2% to 9% issuer share come from an aggregator citing Bloomberg and Morningstar.", "Bloomberg"],
-  ["Morgan Stanley $800bn", "Reported through Capacity. Confirm the original note and its scope.", "Morgan Stanley research"],
-  ["Project Jupiter", "Loan quotes of 89 to 91 are from the FT on Sept 18 to 19. The detail that Oracle cannot terminate the lease and pays debt costs is one anonymous source in Reuters. Check for later quotes.", "FT, Reuters, Bloomberg"],
-  ["CoreWeave site notes", "9.25%, 98.5 cents, plus 270bps versus similarly rated debt, priced about Sept 23. Reported through aggregators of Bloomberg.", "Bloomberg"],
-  ["Hyperion lease terms", "Four year initial term and residual value guarantee come from a September 2025 report. Confirm they still describe the structure.", "Bloomberg, S&P presale"],
-  ["BIS and Moody's remarks", "Paraphrased from Capacity's summary. Read the primary reports before attributing.", "BIS, Moody's"],
-  ["Sources footer", "I listed the original publishers, but several figures reached me through aggregators. Adjust the footer to what you actually pull.", "Your pulls"],
-  ["Page numbers and cover", "I assumed the cover is page 4 and the case study pages are 5 and 6, as in March and August. The cover photo is the March BDC image as a stand in.", "Your September file"],
+  ["Source access", "Every research and fact check pass ran on search result text. The proxy blocked opening pages, so no figure has been read at its source. Click through each chart and table value before publishing.", "Links in charts.js and reviews/research-*.md"],
+  ["Hyperion secondary price", "The low 90s price and about T+230 spread in late September come from aggregators. Another aggregator gives a 94.4 low in July or August.", "Bloomberg or TRACE"],
+  ["Hyperion launch spread", "T+225 per IFR. One aggregator says 185bps.", "IFR, Bloomberg"],
+  ["Saline", "About $14bn of bonds and 15% equity are from the Related and Blackstone releases. The 7.5% is price guidance, not a final coupon.", "Offering memorandum or Bloomberg"],
+  ["Abilene and xAI leverage", "Both ratios are derived from reported debt and cost or purchase price, not stated by the lenders.", "Deal documents"],
+  ["CoreWeave DDTL 4.0 pricing", "SOFR plus 225 is in one research file as a company release and in another as aggregator only.", "CoreWeave release and 10-Q"],
+  ["Oracle long bond yield", "Above 8% for the first time, from Bloomberg via Yahoo. Pin the date and bond.", "Bloomberg"],
+  ["Issuance to date", "About $223bn for four issuers runs through late August. Alphabet priced a jumbo deal in early August that may or may not be inside that figure. Refresh before publishing.", "LSEG"],
+  ["Amazon and Meta deal terms", "Amazon's July NIC of 10 to 12bps and Meta's April 2066 at T+147 come from Bloomberg syndications and Fortune.", "Bloomberg"],
+  ["Page numbers and cover", "The cover is assumed to be page 4 and the case study pages 5 to 7. The cover photo is a stand in.", "Final report file"],
 ];
 
 // Appendix C, extra facts not on the page
 const extras = [
-  ["Hyperion", [
-    "Meta received a $3bn cash distribution at closing, and Blue Owl funded part of its commitment through debt sold to Pimco and other bond investors (The Asset).",
-    "If Meta ends the lease and the campus is worth less than the guaranteed amount, Meta pays the shortfall (Bloomberg via iTiger).",
-    "The campus is due online in 2029 and Meta runs construction and operations (The Asset).",
-    "BlackRock bought more than $3bn of the Hyperion bonds (Zhitong via Longport).",
-    "Meta's $30bn bond in October 2025 was the largest investment grade deal of 2025 and the largest non M&A deal ever, with about $125bn of orders (Bloomberg, Reuters via Silicon Analysts and MarketScreener).",
+  ["Deal detail", [
+    "El Paso notes are amortizing, due November 30, 2048, sold by Sopaipilla Investor LLC. BlackRock holds 80% of the joint venture and Meta 20% (PitchBook).",
+    "Meta's El Paso residual value guarantee reportedly has an aggregate threshold of about $13bn that steps down over time (aggregator).",
+    "Saline bonds have a 19.5 year maturity, 14 year weighted average life, six years of interest only, then 13 years of amortization, with Pimco anchoring about $10bn (Bloomberg).",
+    "CloudHQ's $1.4bn data center ABS earned Fitch's first AAA in the sector, yet Fitch's stressed view showed 0.71x DSCR and 125.6% LTV (trade press).",
+    "Vantage's UK ABS class A-2 carries a 53.6% LTV and a 6.172% coupon (Scope and S&P).",
+    "Data center ABS class A deals typically trap cash below 1.45x DSCR and begin amortizing below 1.25x (trade press on CloudHQ).",
   ]],
-  ["El Paso", [
-    "About $14bn of development cost, with Meta contributing about $2.3bn of land and construction assets and BlackRock about $4.9bn of cash (Zhitong, lower quality source).",
-    "20 year lease with Meta as sole tenant, and insurance limits of $427m during construction and $450m after operations start, about 3.2% of cost (Zhitong via Webull, lower quality source).",
-    "Deal led by JPMorgan and Morgan Stanley, and early talk was above 7%, about 0.4 points over Hyperion (FT via Moneywise).",
-    "Orders were about $17bn, which was weaker coverage than typical for the size (Briefs, BigGo).",
+  ["GPU lending", [
+    "CoreWeave repays its DDTLs from the greater of contracted cash flow or the depreciated GPU cost (S-1).",
+    "CoreWeave depreciates equipment over six years. Amazon cut some servers to five years and Meta moved to 5.5 (company filings via research notes).",
+    "CoreWeave priced $3.7bn of 2.875% convertible notes due 2033 on September 18 (SEC exhibit).",
+    "No 2026 neocloud default was found in research.",
   ]],
-  ["Oracle", [
-    "Oracle ended fiscal 2026 with negative free cash flow and roughly $260bn of data center lease obligations (Reuters via Benzinga).",
-    "S&P described a failure path in which OpenAI cannot pay Oracle and Oracle is left holding leases it cannot exit (PPC Land).",
-    "Morgan Stanley's Lindsay Tyler said Oracle could end the year with two low BBB ratings, raising fallen angel concern, though she sees high yield as a medium term risk (Benzinga).",
-    "Oracle planned to raise another $40bn through debt and equity, including $20bn of stock (TNW).",
-    "Oracle has also issued about $18bn of bonds in September 2025 and $18bn or more in February 2026 (MLQ and ECM Source tables).",
-  ]],
-  ["Project Jupiter", [
-    "A source told Reuters Blue Owl earns a 9% yield on its equity during development and expects about 11% levered at completion. By invoking force majeure, Oracle extends the period at the lower development rent (Reuters, Sept 24).",
-    "New Mexico's State Land Office denied the Energy Transfer gas pipeline twice, pushing its in service date to Feb 1, 2027 (Bloomberg via AI Weekly).",
-    "Oracle and Blue Owl shares each fell about 4% on the notice, and spreads on related AI infrastructure notes briefly blew out before tightening (Axios, AI Weekly).",
-  ]],
-  ["CoreWeave site", [
-    "The Digital Drive campus near Richmond has 76MW of IT capacity under a 15 year, $2.94bn CoreWeave contract, and operations are targeted for 2027 to 2028 (Bloomberg via MT Newswires).",
-    "The issuer was DDC 01 Propco LLC, backed by Blue Owl affiliates, Cedarwood Investment Group, and PowerHouse Data Centers (Remio, lower quality source).",
+  ["Oracle and Jupiter", [
+    "Moody's rates Oracle Baa2 with a negative outlook and Fitch rates it BBB (press).",
+    "A downgrade to high yield would push about $120bn of Oracle bonds out of investment grade indexes (Bloomberg via Yahoo).",
+    "On September 17 the New Mexico Supreme Court lifted stays on the Jupiter air permit hearing and water use (press).",
   ]],
   ["Market wide", [
-    "S&P estimates the five hyperscalers will spend about $750bn on capex in 2026, equal to 38% of combined revenue (MLQ).",
-    "Combined remaining performance obligations of Amazon, Microsoft, Alphabet and Oracle exceed $2tn, nearly triple a year earlier, and secured data center bond issuance is approaching $100bn since Meta's October 2025 deal (Aviva Investors).",
-    "UBS strategist Matthew Mish described AI related debt accumulation at roughly $100bn a quarter (Capacity).",
-    "Barclays expects $2.46tn of US corporate issuance in 2026 with hyperscaler capex the largest upside risk (Reuters via MarketScreener).",
-    "JLL's outlook puts data center investment as high as $3tn over five years (Capacity).",
+    "Bank of England's Financial Policy Committee flagged rising risk of AI linked debt stress on September 30.",
+    "Hyperscalers, data center SPVs and neoclouds raised about $346bn across IG, HY and equity so far in 2026, against $172bn in 2025 (The Real Deal, likely citing Bloomberg).",
+    "Hyperscaler data center ABS traded about 150bps over five year Treasuries in September, 16bps wider than a year earlier (Barclays via The Real Deal).",
   ]],
 ];
 
 // Appendix D, continuity
 const continuity = [
-  "March recap and BDC case study. March reported that Blue Owl, Apollo and Blackstone halted redemptions in private credit funds. Blue Owl is now the equity sponsor behind Hyperion and Project Jupiter, and BlackRock sponsors El Paso. A single sentence linking the two would tie the issues together if there is room.",
-  "March BDC case study. Public BDCs held 20.8% of portfolios in software and another 21% in tech. AI infrastructure financing is the other side of the same AI trade.",
-  "August ABS case study. The esoteric ABS section covers data center securitization. Keep numbers consistent, since it cites $61bn of data center ABS outstanding while also showing $3.3bn of S&P rated issuance through July 6. These are different measures, so avoid mixing them.",
-  "August recap. High yield spreads sat at 260bps, with BB at 146bps and CCC at 850bps. Oracle at BBB- is one notch from the high yield line, which makes a natural bridge to the fallen angel point.",
-  "Rate sanity check. El Paso priced at 7.534%, about 287.5bps over the 10 year, which implies a 10 year near 4.66% in late July. That is consistent with the August recap's note that the 10 year traded through 4.8% by late August.",
-  "August recap inconsistency. Page 1 says Brent was above $85 after the August 31 strikes, while page 3 says it fell below $90 and then rose back above $90. Worth reconciling before September goes out.",
+  "August ABS case study. The esoteric ABS page covers data center securitization. This case study's ABS and CMBS figures (Aligned, BX 2026 VLT10) are deal level and do not repeat the August totals.",
+  "Add the September recap to reference/ so the continuity editor can check rates and spreads against it.",
 ];
 
 // ---------- document ----------
 const pageProps = (extra = {}) => ({ page: { size: { width: PAGE_W, height: PAGE_H }, margin: { top: 1040, bottom: 1250, left: MARG_LR, right: MARG_LR, header: 280, footer: 0 }, ...extra } });
 
-const p1 = c.page1, p2 = c.page2;
+const p1 = c.page1, p2 = c.page2, p3 = c.page3;
 
 const doc = new Document({
   creator: "Leveraged Lion Capital",
@@ -274,7 +254,18 @@ const doc = new Document({
       properties: { ...pageProps() },
       headers: { default: makeHeader() }, footers: { default: makeFooter(p2.sources) },
       children: [
-        title(p2.title), h2(p2.h1), body(p2.p1), twoChartPlaceholders(p2), h2(p2.h2), body(p2.p2), callouts(p2),
+        title(p2.title), h2(p2.h1), body(p2.p1), chartTitle(p2.table.title),
+        simpleTable(p2.table.head, p2.table.rows, [2500, 1000, 1000, 1300, 1550, 1694]),
+        new Paragraph({ spacing: { before: 60, after: 60 }, children: [run(p2.table.note, { size: 14, italics: true })] }),
+        h2(p2.h2), body(p2.p2),
+      ],
+    },
+    // Page 7
+    {
+      properties: { ...pageProps() },
+      headers: { default: makeHeader() }, footers: { default: makeFooter(p3.sources) },
+      children: [
+        title(p3.title), h2(p3.h1), body(p3.p1), twoChartPlaceholders(p3, 2600), h2(p3.h2), body(p3.p2), callouts(p3),
       ],
     },
     // Appendix
@@ -290,7 +281,7 @@ const doc = new Document({
         simpleTable(["Item", "What to check", "Where"], verify, [APP_W * 0.20, APP_W * 0.55, APP_W * 0.25].map(Math.round)),
         new Paragraph({ pageBreakBefore: true, children: [] }),
         aH1("Additional Facts Not on the Pages"),
-        aBody("In depth detail that did not fit in the two page layout. Pull from here if you want to lengthen a callout, add a footnote, or prepare for questions. Tags in parentheses show where each fact came from."),
+        aBody("In depth detail that did not fit in the three page layout. Pull from here if you want to lengthen a callout, add a footnote, or prepare for questions. Tags in parentheses show where each fact came from."),
         ...extras.flatMap(([h, items]) => [aH2(h), ...items.map((t) => bullet([run(t, { size: 20 })]))]),
         aH2("Continuity With Prior Reports"),
         ...continuity.map((t) => bullet([run(t, { size: 20 })])),

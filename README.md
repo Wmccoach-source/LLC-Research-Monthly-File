@@ -1,6 +1,6 @@
 # LLC Case Study, AI Infrastructure Financing
 
-A buildable project for the September 2026 case study (cover plus report pages 5 and 6), with a Claude Code review committee that fact checks, challenges, edits, and layout checks the draft.
+A buildable project for the September 2026 case study (cover plus report pages 5 to 7), with a Claude Code review committee that fact checks, challenges, edits, and layout checks the draft.
 
 ## What is in here
 
@@ -52,7 +52,7 @@ Charts A to D start as dashed placeholders. When the fact checker confirms the n
 ## Known loose ends
 
 - The cover photo is the March BDC image as a stand in. Replace assets/cover_mar-000.jpg or change the path in make_pptx.js and make_docx.js.
-- Page numbers assume the cover is page 4 and the case study is pages 5 and 6.
+- Page numbers assume the cover is page 4 and the case study is pages 5 to 7.
 - Several figures in content.js came through aggregator reposts of Bloomberg, Reuters, and the FT. Expect the fact checker to flag them. The Word file lists 14 items to verify.
 - Add reference/september_recap.pdf when the recap is ready so the continuity editor can compare against it.
 - Subagents are Markdown files with YAML frontmatter in .claude/agents/. See https://code.claude.com/docs/en/sub-agents for the current field list.

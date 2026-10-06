@@ -19,8 +19,9 @@ Voice and density
 - Prefer concrete verbs. Cut hedges that add nothing.
 
 Word budgets
-- Page 5 Overview 150 to 165 words, Credit Markets 165 to 190, Why It Matters 90 to 105.
-- Page 6 Market Activity 115 to 130, Risk Considerations 100 to 115, each callout 80 to 105.
+- Page 5 Overview 155 to 175 words, How Lenders Size the Debt 150 to 170, Why It Matters 100 to 120.
+- Page 6 Market Activity 145 to 165, Spreads Follow the Tenant 145 to 165, plus the deal table (cells under 25 characters).
+- Page 7 Oracle section 150 to 170, Risk Considerations 100 to 120, each callout 85 to 105.
 
 Process
 1. Read the file the chair names (default content.js) and the voice samples in reference/.

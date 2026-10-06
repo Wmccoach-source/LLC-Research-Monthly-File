@@ -110,17 +110,17 @@ function notesFor(ids) {
   s.addText(p.title, { placeholder: "title" });
   pageNumberBox(s, p.pageNum);
   heading(s, p.h1, ML, 1.1, CW);
-  body(s, p.p1, ML, 1.52, CW, 1.72, "Overview body");
-  heading(s, p.h2, ML, 3.3, CW);
-  body(s, p.p2, ML, 3.72, CW, 1.85, "Credit markets body");
-  heading(s, p.h3, ML, 5.53, CW);
-  body(s, p.p3, ML, 5.95, CW, 1.2, "Why it matters body");
+  body(s, p.p1, ML, 1.5, CW, 1.8, "Overview body");
+  heading(s, p.h2, ML, 3.38, CW);
+  body(s, p.p2, ML, 3.78, CW, 1.65, "Lender sizing body");
+  heading(s, p.h3, ML, 5.5, CW);
+  body(s, p.p3, ML, 5.9, CW, 1.3, "Why it matters body");
   const cw = 3.06, gap = CW - cw * 2;
-  chartSlot(s, "C", p.chart1Title, p.chart1Note, ML, 7.25, cw, 2.5);
-  chartSlot(s, "D", p.chart2Title, p.chart2Note, ML + cw + gap, 7.25, cw, 2.5);
+  chartSlot(s, "D", p.chart1Title, p.chart1Note, ML, 7.4, cw, 2.72);
+  chartSlot(s, "B", p.chart2Title, p.chart2Note, ML + cw + gap, 7.4, cw, 2.72);
   sources(s, p.sources);
-  s.addNotes("PAGE 5 CHART IDEAS AND LINKS\nSlots hold charts C and D. Data lives in data/chart_data.json. Set verified to true after the fact checker confirms the numbers and the chart renders natively.\n\n" + notesFor(["C", "D"]) +
-    "\n\nLAYOUT NOTE\nBody is Times New Roman 10.5 pt justified, section headings 20 pt, title 26 pt bold, matching the August and March case studies.");
+  s.addNotes("PAGE 5 CHART IDEAS AND LINKS\nSlots hold charts D and B. Data lives in data/chart_data.json. Set verified to true after the fact checker confirms the numbers and the chart renders natively.\n\n" + notesFor(["D", "B"]) +
+    "\n\nLAYOUT NOTE\nBody is Times New Roman 10.5 pt justified, section headings 20 pt, title 26 pt bold, matching the August case studies.");
 }
 
 // ---------- Page 6 ----------
@@ -130,19 +130,44 @@ function notesFor(ids) {
   s.addText(p.title, { placeholder: "title" });
   pageNumberBox(s, p.pageNum);
   heading(s, p.h1, ML, 1.1, CW);
-  body(s, p.p1, ML, 1.52, CW, 1.3, "Market activity body");
-  const cw = 3.06, gap = CW - cw * 2;
-  chartSlot(s, "A", p.chart1Title, p.chart1Note, ML, 3.02, cw, 2.36);
-  chartSlot(s, "B", p.chart2Title, p.chart2Note, ML + cw + gap, 3.02, cw, 2.36);
-  heading(s, p.h2, ML, 5.55, CW);
-  body(s, p.p2, ML, 5.97, CW, 1.2, "Risk body");
-  const colW = 3.0, colGap = CW - colW * 2;
-  heading(s, p.callL.h, ML, 7.28, colW);
-  heading(s, p.callR.h, ML + colW + colGap, 7.28, colW);
-  body(s, p.callL.p, ML, 7.73, colW, 2.42, "Callout left body");
-  body(s, p.callR.p, ML + colW + colGap, 7.73, colW, 2.42, "Callout right body");
+  body(s, p.p1, ML, 1.5, CW, 2.05, "Market activity body");
+  const t = p.table;
+  s.addText(t.title, { x: ML, y: 3.25, w: CW, h: 0.28, fontFace: FONT, fontSize: 11, bold: true, align: "center", color: C.black, margin: 0, valign: "middle", isTextBox: true, objectName: "Table title" });
+  const cell = (txt, i, hdr, r) => ({ text: txt, options: {
+    fontFace: FONT, fontSize: 8.5, bold: hdr || i === 0, color: hdr ? C.white : C.black,
+    fill: { color: hdr ? C.dark : (r % 2 ? "EDE4DF" : "FFFFFF") },
+    align: i === 0 ? "left" : "center", valign: "middle", margin: [1, 3, 1, 3],
+  } });
+  const rows = [t.head.map((h, i) => cell(h, i, true, 0)), ...t.rows.map((row, r) => row.map((v, i) => cell(v, i, false, r)))];
+  s.addTable(rows, { x: ML, y: 3.57, w: CW, colW: [1.66, 0.66, 0.66, 0.86, 1.08, 1.36], rowH: 0.3, border: { type: "solid", pt: 0.5, color: "C9B3B0" }, objectName: "Deal table" });
+  const tEnd = 3.57 + 0.3 * rows.length;
+  s.addText(t.note, { x: ML, y: tEnd + 0.04, w: CW, h: 0.26, fontFace: FONT, fontSize: 7, italic: true, color: C.black, margin: 0, valign: "top", isTextBox: true, objectName: "Table note" });
+  heading(s, p.h2, ML, tEnd + 0.38, CW);
+  body(s, p.p2, ML, tEnd + 0.78, CW, 2.0, "Spreads body");
   sources(s, p.sources);
-  s.addNotes("PAGE 6 CHART IDEAS AND LINKS\nSlots hold charts A and B. E, F and G are optional swaps.\n\n" + notesFor(["A", "B", "E", "F", "G"]));
+  s.addNotes("PAGE 6 DEAL TABLE\nEvery cell must match reviews/fact-check.md. Derived figures (Saline loan to cost) are labeled in the table note.");
+}
+
+// ---------- Page 7 ----------
+{
+  const p = c.page3;
+  const s = pres.addSlide({ masterName: "LLC_CASE_PAGE" });
+  s.addText(p.title, { placeholder: "title" });
+  pageNumberBox(s, p.pageNum);
+  heading(s, p.h1, ML, 1.1, CW);
+  body(s, p.p1, ML, 1.5, CW, 2.2, "Oracle body");
+  const cw = 3.06, gap = CW - cw * 2;
+  chartSlot(s, "C", p.chart1Title, p.chart1Note, ML, 3.62, cw, 2.05);
+  chartSlot(s, "A", p.chart2Title, p.chart2Note, ML + cw + gap, 3.62, cw, 2.05);
+  heading(s, p.h2, ML, 5.72, CW);
+  body(s, p.p2, ML, 6.12, CW, 1.4, "Risk body");
+  const colW = 3.0, colGap = CW - colW * 2;
+  heading(s, p.callL.h, ML, 7.62, colW);
+  heading(s, p.callR.h, ML + colW + colGap, 7.62, colW);
+  body(s, p.callL.p, ML, 8.02, colW, 2.15, "Callout left body");
+  body(s, p.callR.p, ML + colW + colGap, 8.02, colW, 2.15, "Callout right body");
+  sources(s, p.sources);
+  s.addNotes("PAGE 7 CHART IDEAS AND LINKS\nSlots hold charts C and A.\n\n" + notesFor(["C", "A"]));
 }
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });

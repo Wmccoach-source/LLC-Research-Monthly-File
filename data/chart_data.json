@@ -1,99 +1,66 @@
 {
-  "_readme": "Native charts replace the dashed placeholders only when verified is true. The chart-builder agent fills this file from fact-checked data. The fact-checker agent must confirm every value and its source before verified is set to true.",
-  "A": {
-    "verified": false,
-    "style": "barH",
-    "title": "AI Infrastructure Debt Yields (%)",
-    "labels": [
-      "Meta corporate (Oct 2025)",
-      "Hyperion (Oct 2025)",
-      "Oracle 10 year (Jul 2026)",
-      "El Paso (Jul 2026)",
-      "CoreWeave site (Sep 2026)"
-    ],
-    "values": [
-      5.5,
-      6.58,
-      6.5,
-      7.534,
-      9.25
-    ],
-    "format": "0.00",
-    "sources": [
-      "Marcellus",
-      "The Asset",
-      "Bloomberg via TNW",
-      "Zhitong via Bitget",
-      "Bloomberg via AI Weekly"
-    ],
-    "footnote": "Bars mix pricing dates (Oct 2025 to Sep 2026), maturities and instruments. A spread over Treasuries version is preferred; only Hyperion (about 225bps) and El Paso (about 287.5bps, press: PitchBook) spreads are found, so raw yields are shown pending verification."
-  },
-  "B": {
-    "verified": true,
-    "style": "col",
-    "title": "Hyperscaler Bond Issuance ($bn)",
-    "labels": [
-      "2025",
-      "2026 to Jul 7",
-      "2026E",
-      "2027E"
-    ],
-    "values": [
-      108,
-      194,
-      250,
-      400
-    ],
-    "format": "0",
-    "footnote": "2025 and 2026 to Jul 7 cover four issuers (Amazon, Alphabet, Meta, Oracle). 2026E and 2027E are Goldman Sachs estimates for five hyperscalers, adding Microsoft.",
-    "sources": [
-      "Reuters analysis of LSEG data",
-      "Goldman Sachs"
-    ]
-  },
-  "C": {
-    "verified": true,
-    "style": "col",
-    "title": "2026 Capex Versus Debt Funding ($bn)",
-    "labels": [
-      "2026 capex",
-      "2026 debt issuance estimate"
-    ],
-    "values": [
-      750,
-      250
-    ],
-    "format": "0",
-    "sources": [
-      "Goldman Sachs"
-    ],
-    "footnote": "Goldman Sachs estimates for five hyperscalers (Meta, Microsoft, Alphabet, Amazon, Oracle). Debt issuance is about one third of capex."
-  },
+  "_readme": "Native charts replace the dashed placeholders only when verified is true. The chart-builder agent fills this file from fact-checked data. The fact-checker agent must confirm every value and its source before verified is set to true. Slots: D and B on page 5, C and A on page 7.",
   "D": {
     "verified": false,
     "style": "barH",
-    "title": "Lease Term Versus Debt Maturity (years)",
+    "title": "Leverage by Financing Route (%)",
     "labels": [
-      "Hyperion initial lease",
-      "El Paso initial lease",
-      "El Paso potential term (with four extensions)",
-      "El Paso bond maturity",
-      "Hyperion bond maturity"
+      "Beacon Point bonds (LTC)",
+      "Saline SPV bonds (LTC)",
+      "Aligned ABS (LTV)",
+      "xAI chip vehicle (advance)",
+      "Abilene bank loans (LTC)"
     ],
-    "values": [
-      4,
-      4,
-      20,
-      22,
-      24
-    ],
+    "values": [95, 85, 70, 65, 64],
     "format": "0",
-    "footnote": "Initial lease terms are committed; the El Paso potential term assumes all four extension options are exercised. Bond maturities are approximate years from pricing (Hyperion 2049 maturity month not found, so 23 or 24 years).",
+    "footnote": "Saline, xAI and Abilene are derived from reported debt and cost. LTC is loan to cost, LTV is loan to value.",
     "sources": [
-      "Meta press release (Hyperion lease)",
-      "Meta press release, July 2026 (El Paso lease terms)",
-      "PitchBook (El Paso bond maturity)",
-      "Bloomberg via iTiger (Hyperion maturity)"
+      "Hut 8 and Milbank via press",
+      "Related Digital and Blackstone releases",
+      "Aligned release and S&P presale",
+      "Apollo release (derived)",
+      "JPMorgan loans via trade press (derived)"
     ]
+  },
+  "B": {
+    "verified": false,
+    "style": "col",
+    "title": "Hyperscaler Bond Issuance ($bn)",
+    "labels": ["2025", "2026 to date", "2026E", "2027E"],
+    "values": [108, 223, 250, 400],
+    "format": "0",
+    "footnote": "Actuals cover Amazon, Alphabet, Meta and Oracle (LSEG). Estimates are Goldman Sachs for five hyperscalers, adding Microsoft.",
+    "sources": ["Reuters and CNBC citing LSEG", "Goldman Sachs via Reuters"]
+  },
+  "C": {
+    "verified": false,
+    "style": "barH",
+    "title": "Project Bond Yields by Tenant (%)",
+    "labels": [
+      "Beacon Point, AA- tenant (Jun 2026)",
+      "Hyperion, Meta (Oct 2025)",
+      "El Paso, Meta (Jul 2026)",
+      "Digital Drive, CoreWeave (Sep 2026)"
+    ],
+    "values": [6.129, 6.581, 7.534, 9.25],
+    "format": "0.00",
+    "footnote": "Yield at issue. Spreads were T+165, T+225 and T+287.5 for the first three.",
+    "sources": ["Hut 8 via press", "IFR", "PitchBook", "Bloomberg"]
+  },
+  "A": {
+    "verified": false,
+    "style": "barH",
+    "title": "GPU Loan Spreads (bps over SOFR)",
+    "labels": [
+      "CoreWeave DDTL 4.0, Meta (A3)",
+      "Lambda TLB, IG offtaker (Baa2)",
+      "CoreWeave DDTL 3.0, OpenAI",
+      "CoreWeave DDTL 5.0 (Ba2)",
+      "CoreWeave DDTL 5.5 (Ba2)"
+    ],
+    "values": [225, 300, 400, 450, 550],
+    "format": "0",
+    "footnote": "Margin over SOFR at closing.",
+    "sources": ["CoreWeave release", "Lambda release", "CoreWeave release", "CoreWeave release", "CoreWeave 8-K exhibit"]
   }
 }
