@@ -255,7 +255,7 @@ const doc = new Document({
       headers: { default: makeHeader() }, footers: { default: makeFooter(p2.sources) },
       children: [
         title(p2.title), h2(p2.h1), body(p2.p1), chartTitle(p2.table.title),
-        simpleTable(p2.table.head, p2.table.rows, [2500, 1000, 1000, 1300, 1550, 1694]),
+        simpleTable(p2.table.head, p2.table.rows, [2250, 900, 900, 1150, 1450, 700, 1694]),
         new Paragraph({ spacing: { before: 60, after: 60 }, children: [run(p2.table.note, { size: 14, italics: true })] }),
         h2(p2.h2), body(p2.p2),
       ],

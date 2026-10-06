@@ -96,3 +96,39 @@ Note: the fact checker could not open any page (WebFetch blocked by the egress p
 - Chart builder: D's El Paso bar replaced with initial lease 4 plus potential term 20; D back to verified false because the Hyperion maturity (24 years) is approximate (23 or 24). A footnote updated. A false, B and C true.
 - Layout QA: all slides PASS. Applied: page 5 charts lifted 0.2in; page 6 charts moved down 0.1in and shortened 0.09in to clear the Risk heading. Rejected again: left aligned callouts (house style is justified).
 - Stopped after two full rounds, per /committee.
+
+# Version 2 (three page rewrite, 2026-10-06)
+
+Author feedback: not in depth enough, needs specific credit pricing and LTV examples, must be current for October, no March report references, no stale cutoffs such as "July 7". Rewritten from reviews/research-deals.md, research-market.md and research-structures.md, then reviewed (fact-check-v2.md: 131 items, 105 confirmed, 8 conflict, 18 unverifiable; skeptic-v2.md; continuity-v2.md).
+
+## Round 1 merge
+| Change | Driver |
+|---|---|
+| Hyperion secondary price (low 90s, near T+230, ten point loss) cut from page 6 and the Meta callout | Fact check ids 42, 105, 106 aggregator only; skeptic objection 1 (loss would be rates, not credit). Chair search found only Protos (94.4, likely July) |
+| Meta callout now uses the about $28bn RVG against $27.3bn of bonds and June 2029 rent start | Skeptic gap (RVG size against bonds); chair search, Meta 10-K via press |
+| Saline cell to "7.5% at 98.75", final 2045, rating "Not disclosed" | Fact check C1, id 55 |
+| CoreWeave callout "best and worst secured loans" to "A3 and Ba2 facilities", plus timing caveat | Fact check C2; skeptic objection 3 |
+| Oracle "T+95 for BBB peers" to "US BBB index traded around T+95" | Fact check C3 |
+| Abilene cut from text and chart | Fact check C4, ids 14, 15 trade press only |
+| "four times for large 2026 deals" to "average bond sale this year" | Fact check C5 |
+| Beacon Point record claim attributed to Hut 8 and narrowed to HPC | Fact check C6; skeptic |
+| "A+ rating on Meta's lease" to "A+ rated notes backed by Meta's lease" | Fact check C7 |
+| Meta 2066 T+147 versus T+110 cut, confirmed books kept | Fact check ids 74, 75; chair search found conflicting 140 and 180 |
+| Oracle "long bonds above 8%" cut | Fact check id 97; chair search found aggregators only |
+| Oracle FCF negative $5.4bn and prior year capex $8.5bn cut | Fact check ids 87, 88 |
+| Oracle balance restored with S&P 4.5x trigger and "Oracle says the project is on schedule"; "as banks struggled" replaced with FT's "syndicate banks holding more than planned" | Skeptic objection 5 |
+| OpenAI backs "one" CoreWeave facility, not two | Fact check id 101 |
+| Aligned 70% recast as the master trust's senior note cap | Fact check ids 17, 18; chair search found S&P presale wording on the trust |
+| Sizing mechanics added (rent covers debt service with a thin cushion, amortize before lease and renewals end), KBRA haircut explained (cash flow 18.9% below issuer) | Skeptic depth gaps |
+| Thesis refined to "tenant sets the starting point, tenor and timing set the rest"; final maturity column added to the table | Skeptic objection 2 |
+| Apollo order cover from about 5x to below 2x added | Research (Reuters, Apollo) |
+| Moody's $662bn dated to end 2025 | Fact check stale note |
+| Page 5 overview trimmed | Continuity (density) |
+
+## Rejected or deferred
+| Suggestion | Reason |
+|---|---|
+| Fitch 1.32x DSCR figure | Aggregator only (chair search); mechanism described without the number |
+| Spread decomposition, recovery, GPU residuals, who holds the paper | No sourced figures; word budget |
+| WAL column | Not available for most deals; final maturity used instead |
+| Optional August cross references | Budget full; page 5 overview no longer points to the ABS case study |

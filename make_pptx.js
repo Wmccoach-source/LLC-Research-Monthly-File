@@ -111,10 +111,10 @@ function notesFor(ids) {
   pageNumberBox(s, p.pageNum);
   heading(s, p.h1, ML, 1.1, CW);
   body(s, p.p1, ML, 1.5, CW, 1.8, "Overview body");
-  heading(s, p.h2, ML, 3.38, CW);
-  body(s, p.p2, ML, 3.78, CW, 1.65, "Lender sizing body");
-  heading(s, p.h3, ML, 5.5, CW);
-  body(s, p.p3, ML, 5.9, CW, 1.3, "Why it matters body");
+  heading(s, p.h2, ML, 3.12, CW);
+  body(s, p.p2, ML, 3.52, CW, 1.95, "Lender sizing body");
+  heading(s, p.h3, ML, 5.55, CW);
+  body(s, p.p3, ML, 5.95, CW, 1.35, "Why it matters body");
   const cw = 3.06, gap = CW - cw * 2;
   chartSlot(s, "D", p.chart1Title, p.chart1Note, ML, 7.4, cw, 2.72);
   chartSlot(s, "B", p.chart2Title, p.chart2Note, ML + cw + gap, 7.4, cw, 2.72);
@@ -134,13 +134,13 @@ function notesFor(ids) {
   const t = p.table;
   s.addText(t.title, { x: ML, y: 3.25, w: CW, h: 0.28, fontFace: FONT, fontSize: 11, bold: true, align: "center", color: C.black, margin: 0, valign: "middle", isTextBox: true, objectName: "Table title" });
   const cell = (txt, i, hdr, r) => ({ text: txt, options: {
-    fontFace: FONT, fontSize: 8.5, bold: hdr || i === 0, color: hdr ? C.white : C.black,
+    fontFace: FONT, fontSize: 8, bold: hdr || i === 0, color: hdr ? C.white : C.black,
     fill: { color: hdr ? C.dark : (r % 2 ? "EDE4DF" : "FFFFFF") },
     align: i === 0 ? "left" : "center", valign: "middle", margin: [1, 3, 1, 3],
   } });
   const rows = [t.head.map((h, i) => cell(h, i, true, 0)), ...t.rows.map((row, r) => row.map((v, i) => cell(v, i, false, r)))];
-  s.addTable(rows, { x: ML, y: 3.57, w: CW, colW: [1.66, 0.66, 0.66, 0.86, 1.08, 1.36], rowH: 0.3, border: { type: "solid", pt: 0.5, color: "C9B3B0" }, objectName: "Deal table" });
-  const tEnd = 3.57 + 0.3 * rows.length;
+  s.addTable(rows, { x: ML, y: 3.57, w: CW, colW: [1.5, 0.6, 0.6, 0.78, 1.0, 0.62, 1.18], rowH: 0.28, border: { type: "solid", pt: 0.5, color: "C9B3B0" }, objectName: "Deal table" });
+  const tEnd = 3.57 + 0.28 * rows.length;
   s.addText(t.note, { x: ML, y: tEnd + 0.04, w: CW, h: 0.26, fontFace: FONT, fontSize: 7, italic: true, color: C.black, margin: 0, valign: "top", isTextBox: true, objectName: "Table note" });
   heading(s, p.h2, ML, tEnd + 0.38, CW);
   body(s, p.p2, ML, tEnd + 0.78, CW, 2.0, "Spreads body");
@@ -157,8 +157,8 @@ function notesFor(ids) {
   heading(s, p.h1, ML, 1.1, CW);
   body(s, p.p1, ML, 1.5, CW, 2.2, "Oracle body");
   const cw = 3.06, gap = CW - cw * 2;
-  chartSlot(s, "C", p.chart1Title, p.chart1Note, ML, 3.62, cw, 2.05);
-  chartSlot(s, "A", p.chart2Title, p.chart2Note, ML + cw + gap, 3.62, cw, 2.05);
+  chartSlot(s, "C", p.chart1Title, p.chart1Note, ML, 3.5, cw, 2.12);
+  chartSlot(s, "A", p.chart2Title, p.chart2Note, ML + cw + gap, 3.5, cw, 2.12);
   heading(s, p.h2, ML, 5.72, CW);
   body(s, p.p2, ML, 6.12, CW, 1.4, "Risk body");
   const colW = 3.0, colGap = CW - colW * 2;
