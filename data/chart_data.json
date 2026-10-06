@@ -1,0 +1,98 @@
+{
+  "_readme": "Native charts replace the dashed placeholders only when verified is true. The chart-builder agent fills this file from fact-checked data. The fact-checker agent must confirm every value and its source before verified is set to true.",
+  "A": {
+    "verified": false,
+    "style": "barH",
+    "title": "AI Infrastructure Debt Yields (%)",
+    "labels": [
+      "Meta corporate (Oct 2025)",
+      "Hyperion (Oct 2025)",
+      "Oracle 10 year (Jul 2026)",
+      "El Paso (Jul 2026)",
+      "CoreWeave site (Sep 2026)"
+    ],
+    "values": [
+      5.5,
+      6.58,
+      6.5,
+      7.534,
+      9.25
+    ],
+    "format": "0.00",
+    "sources": [
+      "Marcellus",
+      "The Asset",
+      "Bloomberg via TNW",
+      "Zhitong via Bitget",
+      "Bloomberg via AI Weekly"
+    ]
+  },
+  "B": {
+    "verified": false,
+    "style": "col",
+    "title": "Hyperscaler Bond Issuance ($bn)",
+    "labels": [
+      "2025",
+      "2026 YTD",
+      "2026E",
+      "2027E"
+    ],
+    "values": [
+      108,
+      194,
+      250,
+      400
+    ],
+    "format": "0",
+    "footnote": "2025 and 2026 YTD (through July 7) cover Amazon, Alphabet, Meta and Oracle. Estimates are Goldman Sachs for five hyperscalers.",
+    "sources": [
+      "Reuters and LSEG via Yahoo Finance",
+      "Goldman Sachs via Yahoo Finance"
+    ]
+  },
+  "C": {
+    "verified": false,
+    "style": "col",
+    "title": "Capex Versus Operating Cash Flow ($bn)",
+    "labels": [
+      "2026 capex",
+      "2026 operating cash flow"
+    ],
+    "values": [
+      750,
+      778
+    ],
+    "format": "0",
+    "sources": [
+      "Goldman Sachs via Yahoo Finance"
+    ]
+  },
+  "D": {
+    "verified": false,
+    "style": "barH",
+    "title": "Asset Life Versus Debt Maturity (years)",
+    "labels": [
+      "GPU useful life (upper end)",
+      "Hyperion initial lease",
+      "El Paso lease",
+      "El Paso bond maturity",
+      "Hyperion bond maturity"
+    ],
+    "values": [
+      5,
+      4,
+      20,
+      22,
+      24
+    ],
+    "format": "0",
+    "footnote": "Bond maturities are approximate years from pricing. GPU life is a 3 to 5 year range.",
+    "sources": [
+      "Capacity",
+      "Bloomberg via iTiger",
+      "Zhitong via Webull",
+      "Bloomberg via Briefs",
+      "Capacity"
+    ]
+  }
+}

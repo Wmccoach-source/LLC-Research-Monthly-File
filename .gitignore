@@ -1,0 +1,4 @@
+node_modules/
+reviews/render/
+outputs/*.pdf
+.DS_Store

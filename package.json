@@ -1,0 +1,15 @@
+{
+  "name": "llc-case-study",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LLC monthly report case study builder with a review committee",
+  "scripts": {
+    "build": "node make_pptx.js && node make_docx.js",
+    "render": "bash scripts/render.sh",
+    "lint": "node scripts/lint_text.js"
+  },
+  "dependencies": {
+    "docx": "^9.6.1",
+    "pptxgenjs": "^4.0.1"
+  }
+}
