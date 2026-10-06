@@ -25,15 +25,16 @@
       "Bloomberg via TNW",
       "Zhitong via Bitget",
       "Bloomberg via AI Weekly"
-    ]
+    ],
+    "footnote": "Bars mix pricing dates (Oct 2025 to Sep 2026), maturities and instruments. A spread over Treasuries version is preferred; only Hyperion (about 225bps) and El Paso (about 287.5bps, aggregator only) spreads are found, so raw yields are shown pending verification."
   },
   "B": {
-    "verified": false,
+    "verified": true,
     "style": "col",
     "title": "Hyperscaler Bond Issuance ($bn)",
     "labels": [
       "2025",
-      "2026 YTD",
+      "2026 to Jul 7",
       "2026E",
       "2027E"
     ],
@@ -44,55 +45,52 @@
       400
     ],
     "format": "0",
-    "footnote": "2025 and 2026 YTD (through July 7) cover Amazon, Alphabet, Meta and Oracle. Estimates are Goldman Sachs for five hyperscalers.",
+    "footnote": "2025 and 2026 to Jul 7 cover four issuers (Amazon, Alphabet, Meta, Oracle). 2026E and 2027E are Goldman Sachs estimates for five hyperscalers, adding Microsoft.",
     "sources": [
-      "Reuters and LSEG via Yahoo Finance",
-      "Goldman Sachs via Yahoo Finance"
+      "Reuters analysis of LSEG data",
+      "Goldman Sachs"
     ]
   },
   "C": {
-    "verified": false,
+    "verified": true,
     "style": "col",
-    "title": "Capex Versus Operating Cash Flow ($bn)",
+    "title": "2026 Capex Versus Debt Funding ($bn)",
     "labels": [
       "2026 capex",
-      "2026 operating cash flow"
+      "2026 debt issuance estimate"
     ],
     "values": [
       750,
-      778
+      250
     ],
     "format": "0",
     "sources": [
-      "Goldman Sachs via Yahoo Finance"
-    ]
+      "Goldman Sachs"
+    ],
+    "footnote": "Goldman Sachs estimates for five hyperscalers (Meta, Microsoft, Alphabet, Amazon, Oracle). Debt issuance is about one third of capex."
   },
   "D": {
-    "verified": false,
+    "verified": true,
     "style": "barH",
     "title": "Asset Life Versus Debt Maturity (years)",
     "labels": [
-      "GPU useful life (upper end)",
       "Hyperion initial lease",
       "El Paso lease",
       "El Paso bond maturity",
       "Hyperion bond maturity"
     ],
     "values": [
-      5,
       4,
       20,
       22,
       24
     ],
     "format": "0",
-    "footnote": "Bond maturities are approximate years from pricing. GPU life is a 3 to 5 year range.",
+    "footnote": "Bond maturities are approximate years from pricing.",
     "sources": [
-      "Capacity",
-      "Bloomberg via iTiger",
-      "Zhitong via Webull",
-      "Bloomberg via Briefs",
-      "Capacity"
+      "Meta press release (Hyperion lease)",
+      "IBTimes, Bloomberg derived (El Paso lease and maturity)",
+      "Bloomberg via iTiger (Hyperion maturity)"
     ]
   }
 }

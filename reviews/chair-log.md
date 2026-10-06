@@ -61,3 +61,20 @@ Note: the fact checker could not open any page (WebFetch blocked by the egress p
 - CoreWeave site notes (9.25%, about 270bps) are aggregator only (AI Weekly citing Bloomberg).
 - Moody's four to six year obsolescence figure is press tier (DCD).
 - Every "confirmed" verdict was made from search results, without opening pages.
+
+## Round 2 (2026-10-06)
+
+### Style editor (reviews/style.md)
+- Applied: page1.p1 run on sentence split after "ABS case study".
+- Applied: page2.p2 cut filler opener "The structural risks are familiar to credit investors." (113 to 105 words).
+- Flags checked by the chair: the March recap (p1) names Blue Owl, Apollo and Blackstone as halting redemptions; the August recap says HY volume fell to $12bn, lowest in over a year. Both cross references hold. "Last month's ABS case study" assumes this is the September edition.
+
+### Chart builder (reviews/charts.md)
+- A stays verified false (Oracle 6.5%, El Paso 7.534%, CoreWeave 9.25% unverifiable).
+- B, C, D set verified true; every value carries a "confirmed" fact check verdict. Caveat kept: confirmations came from search results, not opened pages. Revert to false if Will's click-through fails.
+- Chair change: page1.chart2Title retitled "Lease Term Versus Debt Maturity (years)" since the GPU bar was dropped. The internal title field in data/chart_data.json still reads "Asset Life"; it is not displayed.
+
+### Layout QA (reviews/layout.md), all slides PASS
+- Applied: "Why It Matters" heading and body moved up 0.15in (gap was larger than other sections).
+- Applied: "Risk Considerations" heading and body moved down 0.08in to clear chart B's footnote; callout headings and bodies moved down 0.08in to keep the gap below the risk body. Rendered and checked.
+- Rejected: left aligning the callout bodies. House style is justified body text.

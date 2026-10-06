@@ -113,8 +113,8 @@ function notesFor(ids) {
   body(s, p.p1, ML, 1.52, CW, 1.72, "Overview body");
   heading(s, p.h2, ML, 3.3, CW);
   body(s, p.p2, ML, 3.72, CW, 1.85, "Credit markets body");
-  heading(s, p.h3, ML, 5.68, CW);
-  body(s, p.p3, ML, 6.1, CW, 1.2, "Why it matters body");
+  heading(s, p.h3, ML, 5.53, CW);
+  body(s, p.p3, ML, 5.95, CW, 1.2, "Why it matters body");
   const cw = 3.06, gap = CW - cw * 2;
   chartSlot(s, "C", p.chart1Title, p.chart1Note, ML, 7.45, cw, 2.5);
   chartSlot(s, "D", p.chart2Title, p.chart2Note, ML + cw + gap, 7.45, cw, 2.5);
@@ -134,13 +134,13 @@ function notesFor(ids) {
   const cw = 3.06, gap = CW - cw * 2;
   chartSlot(s, "A", p.chart1Title, p.chart1Note, ML, 2.92, cw, 2.45);
   chartSlot(s, "B", p.chart2Title, p.chart2Note, ML + cw + gap, 2.92, cw, 2.45);
-  heading(s, p.h2, ML, 5.47, CW);
-  body(s, p.p2, ML, 5.89, CW, 1.2, "Risk body");
+  heading(s, p.h2, ML, 5.55, CW);
+  body(s, p.p2, ML, 5.97, CW, 1.2, "Risk body");
   const colW = 3.0, colGap = CW - colW * 2;
-  heading(s, p.callL.h, ML, 7.2, colW);
-  heading(s, p.callR.h, ML + colW + colGap, 7.2, colW);
-  body(s, p.callL.p, ML, 7.65, colW, 2.5, "Callout left body");
-  body(s, p.callR.p, ML + colW + colGap, 7.65, colW, 2.5, "Callout right body");
+  heading(s, p.callL.h, ML, 7.28, colW);
+  heading(s, p.callR.h, ML + colW + colGap, 7.28, colW);
+  body(s, p.callL.p, ML, 7.73, colW, 2.42, "Callout left body");
+  body(s, p.callR.p, ML + colW + colGap, 7.73, colW, 2.42, "Callout right body");
   sources(s, p.sources);
   s.addNotes("PAGE 6 CHART IDEAS AND LINKS\nSlots hold charts A and B. E, F and G are optional swaps.\n\n" + notesFor(["A", "B", "E", "F", "G"]));
 }
