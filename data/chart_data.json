@@ -7,33 +7,49 @@
     "labels": [
       "Beacon Point bonds (LTC)",
       "Saline SPV bonds (LTC)",
-      "Aligned ABS (LTV)",
-      "xAI chip vehicle (advance)",
-      "Abilene bank loans (LTC)"
+      "Aligned ABS senior LTV cap",
+      "Apollo share of xAI chip purchase"
     ],
-    "values": [95, 85, 70, 65, 64],
+    "values": [
+      95,
+      85,
+      70,
+      65
+    ],
     "format": "0",
-    "footnote": "Saline, xAI and Abilene are derived from reported debt and cost. LTC is loan to cost, LTV is loan to value.",
+    "footnote": "Bars use different measures, loan to cost for Beacon Point and Saline, a loan to value cap for Aligned, and a share of purchase price for xAI. Saline and xAI are derived.",
     "sources": [
       "Hut 8 and Milbank via press",
       "Related Digital and Blackstone releases",
-      "Aligned release and S&P presale",
-      "Apollo release (derived)",
-      "JPMorgan loans via trade press (derived)"
+      "Aligned release and S&P presale wording (aggregator relay)",
+      "Apollo release (derived)"
     ]
   },
   "B": {
     "verified": false,
     "style": "col",
     "title": "Hyperscaler Bond Issuance ($bn)",
-    "labels": ["2025", "2026 to date", "2026E", "2027E"],
-    "values": [108, 223, 250, 400],
+    "labels": [
+      "2025",
+      "2026 to date",
+      "2026E",
+      "2027E"
+    ],
+    "values": [
+      108,
+      223,
+      250,
+      400
+    ],
     "format": "0",
-    "footnote": "Actuals cover Amazon, Alphabet, Meta and Oracle (LSEG). Estimates are Goldman Sachs for five hyperscalers, adding Microsoft.",
-    "sources": ["Reuters and CNBC citing LSEG", "Goldman Sachs via Reuters"]
+    "footnote": "Actuals cover Amazon, Alphabet, Meta and Oracle (LSEG, through late August). Estimates are Goldman Sachs for five hyperscalers, adding Microsoft.",
+    "sources": [
+      "Reuters and CNBC citing LSEG",
+      "Goldman Sachs via Reuters"
+    ]
   },
   "C": {
-    "verified": false,
+    "verified": true,
     "style": "barH",
     "title": "Project Bond Yields by Tenant (%)",
     "labels": [
@@ -42,13 +58,23 @@
       "El Paso, Meta (Jul 2026)",
       "Digital Drive, CoreWeave (Sep 2026)"
     ],
-    "values": [6.129, 6.581, 7.534, 9.25],
+    "values": [
+      6.129,
+      6.581,
+      7.534,
+      9.25
+    ],
     "format": "0.00",
-    "footnote": "Yield at issue. Spreads were T+165, T+225 and T+287.5 for the first three.",
-    "sources": ["Hut 8 via press", "IFR", "PitchBook", "Bloomberg"]
+    "footnote": "Yield at issue, Oct 2025 to Sep 2026. Treasury yields moved over the period, so the spreads of T+165, T+225 and T+287.5 are the fair comparison.",
+    "sources": [
+      "Hut 8 release",
+      "IFR",
+      "PitchBook",
+      "Bloomberg"
+    ]
   },
   "A": {
-    "verified": false,
+    "verified": true,
     "style": "barH",
     "title": "GPU Loan Spreads (bps over SOFR)",
     "labels": [
@@ -58,9 +84,21 @@
       "CoreWeave DDTL 5.0 (Ba2)",
       "CoreWeave DDTL 5.5 (Ba2)"
     ],
-    "values": [225, 300, 400, 450, 550],
+    "values": [
+      225,
+      300,
+      400,
+      450,
+      550
+    ],
     "format": "0",
     "footnote": "Margin over SOFR at closing.",
-    "sources": ["CoreWeave release", "Lambda release", "CoreWeave release", "CoreWeave release", "CoreWeave 8-K exhibit"]
+    "sources": [
+      "CoreWeave release",
+      "Lambda release",
+      "CoreWeave release",
+      "CoreWeave release",
+      "CoreWeave 8-K exhibit"
+    ]
   }
 }
