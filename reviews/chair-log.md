@@ -78,3 +78,21 @@ Note: the fact checker could not open any page (WebFetch blocked by the egress p
 - Applied: "Why It Matters" heading and body moved up 0.15in (gap was larger than other sections).
 - Applied: "Risk Considerations" heading and body moved down 0.08in to clear chart B's footnote; callout headings and bodies moved down 0.08in to keep the gap below the risk body. Rendered and checked.
 - Rejected: left aligning the callout bodies. House style is justified body text.
+
+## Rerun (Round 1 fact checker, then Round 2 once more)
+
+### Fact check rerun (reviews/fact-check-r2.md: 58 items, 49 confirmed, 6 conflict, 3 unverifiable)
+- page1.p2: cut "high yield issuance at a one year low of $12bn" (conflict; Newfleet and Muzinich report about $27bn for August 2026). The August recap's $12bn figure may itself be wrong; flagged for Will. Replaced with Goldman's 2027 issuance at about 35% of capex (confirmed).
+- page1.p2: Blue Owl "halted fund redemptions in March" to "halted or capped fund redemptions early this year" (Blue Owl release dated February 18; Apollo capped).
+- page1.p2: Morgan Stanley figure labeled "global".
+- page1.p2: maturity mismatch now cites the four year initial terms at both Hyperion and El Paso (Meta El Paso release).
+- page2.p1: "Meta's El Paso bonds" to "The El Paso joint venture bonds" (issuer is Sopaipilla Investor LLC); orders "peaking near $20bn" (Round 1 fix on $17bn was too firm).
+- page2.p1: CoreWeave notes now confirmed via Bloomberg; "reportedly" removed, S&P BB- rating added, 270bps described as a gap to the average yield on similarly rated debt.
+- page2.p2: residual value guarantee described as capped.
+- callL: "structure, supply, and duration" to "structure and supply" (both deals amortize to 2048 and 2049).
+
+### Round 2 once more
+- Style editor: no redlines.
+- Chart builder: D's El Paso bar replaced with initial lease 4 plus potential term 20; D back to verified false because the Hyperion maturity (24 years) is approximate (23 or 24). A footnote updated. A false, B and C true.
+- Layout QA: all slides PASS. Applied: page 5 charts lifted 0.2in; page 6 charts moved down 0.1in and shortened 0.09in to clear the Risk heading. Rejected again: left aligned callouts (house style is justified).
+- Stopped after two full rounds, per /committee.

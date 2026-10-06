@@ -116,8 +116,8 @@ function notesFor(ids) {
   heading(s, p.h3, ML, 5.53, CW);
   body(s, p.p3, ML, 5.95, CW, 1.2, "Why it matters body");
   const cw = 3.06, gap = CW - cw * 2;
-  chartSlot(s, "C", p.chart1Title, p.chart1Note, ML, 7.45, cw, 2.5);
-  chartSlot(s, "D", p.chart2Title, p.chart2Note, ML + cw + gap, 7.45, cw, 2.5);
+  chartSlot(s, "C", p.chart1Title, p.chart1Note, ML, 7.25, cw, 2.5);
+  chartSlot(s, "D", p.chart2Title, p.chart2Note, ML + cw + gap, 7.25, cw, 2.5);
   sources(s, p.sources);
   s.addNotes("PAGE 5 CHART IDEAS AND LINKS\nSlots hold charts C and D. Data lives in data/chart_data.json. Set verified to true after the fact checker confirms the numbers and the chart renders natively.\n\n" + notesFor(["C", "D"]) +
     "\n\nLAYOUT NOTE\nBody is Times New Roman 10.5 pt justified, section headings 20 pt, title 26 pt bold, matching the August and March case studies.");
@@ -132,8 +132,8 @@ function notesFor(ids) {
   heading(s, p.h1, ML, 1.1, CW);
   body(s, p.p1, ML, 1.52, CW, 1.3, "Market activity body");
   const cw = 3.06, gap = CW - cw * 2;
-  chartSlot(s, "A", p.chart1Title, p.chart1Note, ML, 2.92, cw, 2.45);
-  chartSlot(s, "B", p.chart2Title, p.chart2Note, ML + cw + gap, 2.92, cw, 2.45);
+  chartSlot(s, "A", p.chart1Title, p.chart1Note, ML, 3.02, cw, 2.36);
+  chartSlot(s, "B", p.chart2Title, p.chart2Note, ML + cw + gap, 3.02, cw, 2.36);
   heading(s, p.h2, ML, 5.55, CW);
   body(s, p.p2, ML, 5.97, CW, 1.2, "Risk body");
   const colW = 3.0, colGap = CW - colW * 2;

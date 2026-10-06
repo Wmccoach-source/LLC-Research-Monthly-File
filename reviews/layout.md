@@ -22,3 +22,33 @@ Colours (maroon, cream background, footer gradient), Times-style serif, heading 
 
 ## Overall verdict: PASS
 There are no blocking issues. The three notes above are optional polish. Note that object names are mostly unset in make_pptx.js, so the names used above are descriptive.
+
+---
+
+# Round 2
+
+Rendered with scripts/render.sh; compared with ref_aug-5/6 and ref_mar-7. Chart D is a placeholder, B and C are native charts.
+
+## Slide 1 (cover): PASS
+Cover box, logo, firm name, rule and two-line title are centred and unclipped. No change from round 1.
+
+## Slide 2 (p.5 AI Infrastructure Financing): PASS (minor notes)
+- No clipping or overflow. Logo, page number box and title are clear of each other. Sources line and footer bar are clear.
+- Section gaps are now even (Overview, Credit Markets, Why It Matters). Body text ends about y=7.0in.
+- Chart C (native, left) and the chart D placeholder (right) are top and bottom aligned, and their titles share a baseline. The C footnote (2 lines) stays inside the placeholder height.
+- Optional: the gap between the end of "Why It Matters" body and the chart titles is about 0.6in, larger than the roughly 0.2in gaps between sections. Try moving both chart titles, chart C, the placeholder and the footnote up by 0.25in, or leave as is.
+- Placeholder text "Insert chart" is intentional.
+
+## Slide 3 (p.6 AI Debt Issuance): PASS (minor notes)
+- No overflow. Column bottoms end about y=9.8in, clear of Sources.
+- Chart A placeholder (left) and chart B (right) are top-aligned and have matching heights; edges line up with the text columns.
+- Cramped: the chart titles sit only about 0.1in under the last line of the "Market Activity" body. Try moving the chart titles, chart B and placeholder A down 0.1in (there is about 0.35in of room above "Risk Considerations").
+- Chart B footnote is 3 lines and sits about 0.2in above "Risk Considerations". Acceptable. Shortening it to 2 lines would help.
+- "Meta SPVs Reprice" and "Oracle Under Pressure" bodies are justified in narrow columns and show wide word gaps (for example "Meta has funded two campuses through joint / ventures with private capital. Hyperion in"). Optional: set align left for both bodies.
+- No one-word last lines or figures split from units.
+
+## Drift versus reference
+Colours, serif font, heading hierarchy, 0.5in margins, page number box and logo match the reference. Body text is slightly smaller and denser than the August reference, which is acceptable. No visible drift.
+
+## Round 2 verdict: PASS
+No blocking issues. The optional fixes are the 0.1in chart shift on slide 3, the 0.25in chart lift on slide 2, and left alignment of the two narrow columns on slide 3. Object names are still mostly unset in make_pptx.js, so the names above are descriptive.

@@ -10,3 +10,13 @@ Caveat: the fact checker could not open any page (WebFetch blocked). Every "conf
 Swap suggestions: none needed now. If A cannot be verified, consider swapping it for optional chart G (78 of 91 bonds wider, 22bps median, 12bps concession; Reuters and LSEG, confirmed ids 24 to 26), omitting the unverifiable IG share row. Chart E needs Bloomberg CDS data and is unverified.
 
 Build: node make_pptx.js completed without errors.
+
+## Round 2 (2026-10-06, from reviews/fact-check-r2.md)
+
+- A: verified false. Oracle 6.5% still unverifiable (id 57). El Paso 7.534 and CoreWeave 9.25 now have press support. Footnote now says El Paso spread is press (PitchBook), no longer "aggregator only". Sources array still names aggregators; fact checker suggests Bloomberg, PitchBook and Meta, not changed because the Oracle source is unresolved.
+- B: verified true (unchanged). Ids 45 to 49 confirmed. Human click-through still recommended.
+- C: verified true (unchanged). Ids 50 to 52 confirmed. Human click-through still recommended.
+- D: verified false. El Paso "lease 20" was a conflict (id 54, C1): Meta's El Paso release gives a four year initial term plus four extensions, potential 20 years. Replaced with "El Paso initial lease" = 4 and a separate "El Paso potential term (with four extensions)" = 20, both sourced to Meta's El Paso release (confirmed, via search). Internal title now "Lease Term Versus Debt Maturity (years)". Stays false because Hyperion bond maturity 24 is unverifiable (id 56, 23 or 24 years, maturity month not found). Footnote states the approximation. Can go true if the fact checker accepts it or the maturity is confirmed; I did not set it on my own judgment.
+
+Swap suggestions: if A cannot be verified, consider optional chart G (78 of 91 bonds wider, 22bps median, 12bps concession; ids 17, 18 confirmed).
+Note: the fact checker's Chart readiness section says D is "otherwise fine" on the other three values, but its item table marks id 56 unverifiable, so D is held false.
