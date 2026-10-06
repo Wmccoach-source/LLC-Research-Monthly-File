@@ -7,7 +7,7 @@
     "labels": [
       "Beacon Point bonds (LTC)",
       "Saline SPV bonds (LTC)",
-      "Aligned ABS senior LTV cap",
+      "Aligned ABS senior LTV (past series)",
       "Apollo share of xAI chip purchase"
     ],
     "values": [
@@ -42,7 +42,7 @@
       400
     ],
     "format": "0",
-    "footnote": "Actuals cover Amazon, Alphabet, Meta and Oracle (LSEG, through late August). Estimates are Goldman Sachs for five hyperscalers, adding Microsoft.",
+    "footnote": "Actuals cover Amazon, Alphabet, Meta and Oracle (LSEG, through August 20). Estimates are Goldman Sachs for five hyperscalers, adding Microsoft.",
     "sources": [
       "Reuters and CNBC citing LSEG",
       "Goldman Sachs via Reuters"

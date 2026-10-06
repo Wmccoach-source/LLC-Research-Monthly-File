@@ -132,3 +132,28 @@ Author feedback: not in depth enough, needs specific credit pricing and LTV exam
 | Spread decomposition, recovery, GPU residuals, who holds the paper | No sourced figures; word budget |
 | WAL column | Not available for most deals; final maturity used instead |
 | Optional August cross references | Budget full; page 5 overview no longer points to the ABS case study |
+
+## Round 2 (version 2)
+- Style editor (style-v2.md): all five redlines applied; no numbers changed.
+- Chart builder (charts-v2.md): A and C verified true (every value confirmed); B and D held false. Chair fixed a colon in D's footnote, removed an unsourced "10 year rose about a point" from C's footnote, and relabeled B's bar "2026 to date".
+- Layout QA (layout-v2.md): FAIL on all three pages (overlap on page 5, white space on page 6, callout near the rule on page 7). All coordinate fixes applied and checked in the render.
+
+## Fact check rerun (fact-check-v2-r2.md: 47 items, 37 confirmed, 3 conflict, 7 unverifiable)
+- R1: RVG now "capped at about $28bn and covering the first 16 years, bridges most of the gap".
+- R2: CoreWeave callout now says the May to August step reflects shorter customer contracts as well as timing.
+- R3: Meta callout "shows ... supply, structure, and timing" to "suggests ... supply and timing".
+- Hyperion rent start "June 2029" to "2029".
+- Aligned recast as S&P wording on past series of the master trust; table cell "~70% LTV (past series)".
+- US BBB index near T+95 attributed to TwentyFour Asset Management.
+- "with a thin cushion" cut (no sourced coverage figure).
+- Final trims to word budgets.
+
+## Open flags for Will
+- No source page was opened by any seat (proxy blocked fetches). Click through the chart A and C values and the table before publishing.
+- Chart B (2026 issuance to date of $223bn) rests on one aggregator relaying CNBC and LSEG; refresh from LSEG.
+- Chart D held because Aligned's 70% is S&P wording from earlier series; open the July 2026 S&P presale.
+- "Oracle says the project is on schedule" is quoted widely but the Bloomberg original was not opened.
+- September recap is not in reference/, so rates and spreads were not cross checked against it.
+- Cover photo is a stand in.
+
+Committee complete, 2 rounds (round 1 review and merge, round 2 style, charts, build, layout, plus a fact checker rerun).

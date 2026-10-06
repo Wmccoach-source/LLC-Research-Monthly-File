@@ -34,7 +34,7 @@ const charts = [
     rows: [
       ["Hut 8 Beacon Point bonds, loan to cost", "95", "Hut 8 and counsel via press"],
       ["Oracle Saline SPV bonds, loan to cost", "about 85 (derived from 15% equity)", "Related Digital and Blackstone releases"],
-      ["Aligned data center ABS, loan to value", "70.0", "Aligned release, S&P presale"],
+      ["Aligned ABS master trust, senior LTV", "about 70 (S&P wording on past series)", "S&P via trade press"],
       ["xAI chip vehicle, advance on purchase", "about 65 (derived, $3.5bn of $5.4bn)", "Apollo release"],
       ["Stargate Abilene bank loans, loan to cost", "about 64 (derived, $9.6bn of about $15bn)", "Trade press"],
     ],
@@ -96,7 +96,7 @@ const charts = [
       ["CoreWeave DDTL 5.0, Ba2 and BB+", "450", "CoreWeave release"],
       ["CoreWeave DDTL 5.5, Ba2 and BB+", "550", "CoreWeave 8-K exhibit"],
     ],
-    note: "DDTL 4.0's SOFR plus 225 appears in the company release per the research notes, but one research pass rated it aggregator only. Confirm in the release before verifying.",
+    note: "All five margins confirmed against company releases and filings in reviews/fact-check-v2.md. DDTL 5.5 also reflects shorter customer contracts, not only timing.",
     links: [
       ["DDTL 3.0", L.cwDdtl3],
       ["DDTL 4.0", L.cwDdtl4],
